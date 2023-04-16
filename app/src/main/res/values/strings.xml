@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Cake for Bakers</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="firstname">FirstName</string>
+    <string name="lastname">lastName</string>
+    <string name="xyz_gmail_com">xyz@gmail.com</string>
+    <string name="yatish_1910">Yatish@1910</string>
+    <string name="_7879123454">7879123454</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="already_an_user">Already an user?</string>
+    <string name="sign_in">Sign In</string>
+</resources>

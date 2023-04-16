@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "826453084783",
+    "project_id": "cake-for-bakers",
+    "storage_bucket": "cake-for-bakers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826453084783:android:07c535378d0a0076089b9a",
+        "android_client_info": {
+          "package_name": "com.example.cakeforbakers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826453084783-h7eh7ckn2t96tgvivo8tk6nja396j3ud.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cakeforbakers",
+            "certificate_hash": "c4ee2351e0b7a410a36cb24e31f1044cb43bbdb5"
+          }
+        },
+        {
+          "client_id": "826453084783-1lqrnr5kld0s2dvi5movsqvipeohqi8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhFue7Lkl7M9Vy3lTXOao32kYsvnZp3hg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826453084783-1lqrnr5kld0s2dvi5movsqvipeohqi8b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
