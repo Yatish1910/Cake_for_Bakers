@@ -18,8 +18,8 @@ class AuthViewModel @Inject constructor(
     private val repository: AuthRepository
 ):ViewModel() {
 
-    private val _loginFlow = MutableStateFlow<Resource<FirebaseUser>?>(null)
-    val loginFlow: StateFlow<Resource<FirebaseUser>?> = _loginFlow
+    private val _loginFlow = MutableLiveData<Resource<FirebaseUser>?>(null)
+    val loginFlow: LiveData<Resource<FirebaseUser>?> = _loginFlow
 
     val _signUpFlow = MutableLiveData<Resource<FirebaseUser>?>(null)
 //    val signUpFlow:LiveData<Resource<FirebaseUser>?> = _signUpFlow
@@ -35,9 +35,13 @@ class AuthViewModel @Inject constructor(
     }
 
     fun loginUser(email:String, password:String) = viewModelScope.launch {
+        Log.d("userDetailEmail",email)
+        Log.d("userDetailPass",password)
         _loginFlow.value = Resource.Loading
         val result = repository.login(email,password)
-        _loginFlow.value  = result
+        result.let {
+            _loginFlow.postValue(result)
+        }
     }
 
     fun signUpUser(userModel: UserModel,password: String) = viewModelScope.launch {
