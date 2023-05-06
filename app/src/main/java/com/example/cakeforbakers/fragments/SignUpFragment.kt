@@ -10,6 +10,8 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import com.example.cakeforbakers.R
 import com.example.cakeforbakers.data.AuthViewModel
 import com.example.cakeforbakers.data.Resource
 import com.example.cakeforbakers.data.model.UserModel
@@ -36,17 +38,6 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setUpUI()
     }
-
-//    private fun setInitialUi() {
-//        val firstName = binding.firstNameEt.text.toString()
-//        val lastName = binding.secondNameEt.text.toString()
-//        val emailId = binding.emailIdEt.text.toString()
-//        val passWord = binding.passWordEt.text.toString()
-//        val phoneNumber = binding.phoneNumberEt.text.toString()
-//        val userModel = UserModel(firstName,lastName,emailId,phoneNumber)
-//        Log.d("userModel",userModel.toString())
-//
-//    }
 
     private fun setUpUI() {
         binding.submitBt.setOnClickListener {
@@ -80,11 +71,12 @@ class SignUpFragment : Fragment() {
                             null -> {}
                         }
                     })
-
             }
         }
 
-
+        binding.alreadyUserTv.setOnClickListener {
+            findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
+        }
     }
 
 }

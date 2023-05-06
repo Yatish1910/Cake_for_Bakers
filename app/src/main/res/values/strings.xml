@@ -10,4 +10,8 @@
     <string name="sign_up">SIGN UP</string>
     <string name="already_an_user">Already an user?</string>
     <string name="sign_in">Sign In</string>
+    <string name="home">Home</string>
+    <string name="dining">Dining</string>
+    <string name="cart">Cart</string>
+    <string name="recipe">Recipe</string>
 </resources>

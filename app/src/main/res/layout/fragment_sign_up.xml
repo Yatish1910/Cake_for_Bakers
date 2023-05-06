@@ -29,7 +29,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/firstNameEt"
         android:hint="@string/lastname"
-
         android:inputType="textPersonName"/>
     
     <EditText
@@ -103,12 +102,6 @@
         app:layout_constraintTop_toBottomOf="@id/submitBt"
         android:text="@string/already_an_user"
         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@id/submitBt"
-        app:layout_constraintStart_toEndOf="@id/alreadyUserTv"
-        app:layout_constraintTop_toBottomOf="@id/submitBt"
-        android:text="@string/sign_in" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

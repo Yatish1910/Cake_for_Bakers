@@ -28,7 +28,8 @@ class AuthRepositoryImpl @Inject constructor(
     ): Resource<FirebaseUser> {
         return try {
             val result = firebaseAuth.createUserWithEmailAndPassword(userModel.email.toString(),password).await()
-            firebaseFirestore.collection("UserInformation").document()
+            Log.d("Devu",result.user!!.uid)
+            firebaseFirestore.collection("UserInformation").document(result.user!!.uid)
                 .set(userModel)
                 .addOnCanceledListener { Log.d("additionalInfo",userModel.toString()) }
                 .addOnFailureListener { Log.d("additionalInfo",it.message.toString()) }
