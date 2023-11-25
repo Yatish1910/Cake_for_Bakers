@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@id/signUpFragment">
+    app:startDestination="@id/splashScreenFragment">
 
     <fragment
         android:id="@+id/signUpFragment"
@@ -33,13 +33,7 @@
         android:id="@+id/homeFragment"
         android:name="com.example.cakeforbakers.fragments.homeFragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_diningFragment2"
-            app:destination="@id/diningFragment"
-            app:popUpTo="@id/homeFragment"
-            app:popUpToInclusive="true"/>
-    </fragment>
+        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/diningFragment"
         android:name="com.example.cakeforbakers.fragments.diningFragment.DiningFragment"
@@ -55,4 +49,16 @@
         android:name="com.example.cakeforbakers.fragments.recipeFragment.RecipeFragment"
         android:label="fragment_recipe"
         tools:layout="@layout/fragment_recipe" />
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.cakeforbakers.fragments.splashFragment.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

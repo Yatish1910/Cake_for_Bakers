@@ -33,6 +33,9 @@ class AuthRepositoryImpl @Inject constructor(
                 .set(userModel)
                 .addOnCanceledListener { Log.d("additionalInfo",userModel.toString()) }
                 .addOnFailureListener { Log.d("additionalInfo",it.message.toString()) }
+                .addOnSuccessListener {
+
+                }
             Resource.Success(result.user!!)
         }catch (e:Exception){
             e.printStackTrace()
