@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
             when (destination.id) {
                 R.id.signUpFragment -> binding.mainBottomNavigation.visibility = View.GONE
                 R.id.signInFragment -> binding.mainBottomNavigation.visibility = View.GONE
+                R.id.splashScreenFragment -> binding.mainBottomNavigation.visibility = View.GONE
                 else -> binding.mainBottomNavigation.visibility = View.VISIBLE
             }
         }
